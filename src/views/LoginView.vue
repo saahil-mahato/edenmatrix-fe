@@ -3,13 +3,13 @@
     <div class="login-card p-6 rounded-xl">
         <h1 class="heading">Log In</h1>
         <div class="field">
-          <InputText id="username" v-model="username" placeholder="Enter your username" />
+          <input type="text" id="username" v-model="username" placeholder="Enter your username" />
         </div>
         <div class="field">
-          <InputText id="password" type="password" v-model="password" placeholder="Enter your password" />
+          <input type="password" id="password" v-model="password" placeholder="Enter your password" />
         </div>
         <div class="field">
-        <Button class="w-full" label="Login" @click="handleLogin" />
+        <button class="w-full" @click="handleLogin">Login</button>
         </div>
         <div class="field text-center">
         <a href="#" class="forgot-password">Forgot Password?</a>
@@ -20,13 +20,12 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import InputText from 'primevue/inputtext';
-import Button from 'primevue/button';
 
 const username = ref<string>('');
 const password = ref<string>('');
 
 const handleLogin = (): void => {
+  
 };
 </script>
 
