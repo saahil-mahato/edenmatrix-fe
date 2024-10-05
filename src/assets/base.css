@@ -34,6 +34,17 @@ body {
 }
 
 :root {
-  --color-text-green: hsla(160, 100%, 37%, 1);
-  --color-card-bg: rgb(32,32,32);
+  --white-color: #FFFFFF;
+  --black-color: #000000;
+
+  --primary-color: #007ACC;
+  --secondary-color: #0091EA;
+
+  --primary-hover-color: #005B99;
+
+  --border-color: #FDFDFD;
+  --background-color: #F5F5F5;
+  
+  --success-color: #28B463;
+  --error-color: #C0392B;
 }

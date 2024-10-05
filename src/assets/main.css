@@ -3,3 +3,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.primary-button {
+  @apply
+  p-3
+  text-[var(--white-color)]
+  bg-[var(--primary-color)]
+  rounded-md hover:shadow-2xl
+  hover:bg-[var(--primary-hover-color)]
+}
+
+.card {
+  @apply
+  p-6 
+  rounded-xl
+  text-[var(--black-color)]
+  bg-[var(--white-color)]
+}
+
+.input-field {
+  @apply
+  p-2
+  border-2
+  rounded-lg
+  focus:outline-none
+  text-[var(--black-color)]
+  outline-[var(--border-color)]
+}
+
+.card-title {
+  @apply
+  text-xl
+  text-center
+  font-bold;
+}
+
+.link {
+  @apply
+  hover:underline;
+}
