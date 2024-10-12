@@ -12,15 +12,6 @@
   font-style: normal;
 }
 
-.primary-button {
-  @apply
-  p-3
-  text-[var(--white-color)]
-  bg-[var(--primary-color)]
-  rounded-md hover:shadow-2xl
-  hover:bg-[var(--primary-hover-color)]
-}
-
 .card {
   @apply
   p-6 
