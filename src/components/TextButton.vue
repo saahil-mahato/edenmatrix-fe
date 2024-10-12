@@ -4,32 +4,44 @@
   </button>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { defineProps, computed } from 'vue';
 
-const props = defineProps({
-  type: {
-    type: String,
-    required: true,
-    validator: value => ['primary', 'secondary'].includes(value),
-  },
-  text: {
-    type: String,
-    required: true,
-  },
-  clickEvent: {
-    type: Function,
-    required: true,
-  }
-})
+/**
+ * Props for the Button component.
+ */
+ const props = defineProps<{
+  /**
+   * The type of the button, either 'primary' or 'secondary'.
+   */
+  type: 'primary' | 'secondary';
+  
+  /**
+   * The text to display inside the button.
+   */
+  text: string;
+  
+  /**
+   * The function to call when the button is clicked.
+   * @param event - The click event.
+   */
+  clickEvent: (event: MouseEvent) => void;
+}>();
 
-const buttonClass = computed(() => {
+/**
+ * Computed property to determine the button's CSS class based on its type.
+ */
+ const buttonClass = computed(() => {
   return props.type === 'primary' ? 'btn-primary' : 'btn-secondary';
-})
+});
 
-const handleClick = (event) => {
+/**
+ * Handles the click event by calling the provided clickEvent function.
+ * @param event - The click event.
+ */
+const handleClick = (event: MouseEvent) => {
   props.clickEvent(event);
-}
+};
 </script>
 
 <style scoped>
