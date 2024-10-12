@@ -4,7 +4,7 @@
         <h1 class="card-title">Log In</h1>
         <input class="input-field my-6" type="email" id="email" v-model="email" placeholder="Enter your email" />
         <input class="input-field mb-6" type="password" id="password" v-model="password" placeholder="Enter your password" />
-        <button class="primary-button w-full mb-3" @click="handleLogin">Login</button>
+        <TextButton class="mb-6" type="primary" text="Login" :clickEvent="handleLogin" />
         <a href="#" class="link text-center">Forgot Password?</a>
     </div>
   </div>
@@ -18,6 +18,8 @@ import { HttpStatusCode, type AxiosResponse } from 'axios';
 
 import { post } from '@/utils/http';
 import endpoints from '@/endpoints/endpoints';
+
+import TextButton from '@/components/TextButton.vue';
 
 const email = ref<string>('');
 const password = ref<string>('');
