@@ -12,16 +12,6 @@
   font-style: normal;
 }
 
-.input-field {
-  @apply
-  p-2
-  border-2
-  rounded-lg
-  focus:outline-none
-  text-[var(--black-color)]
-  outline-[var(--border-color)]
-}
-
 .link {
   @apply
   hover:underline;
