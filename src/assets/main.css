@@ -12,14 +12,6 @@
   font-style: normal;
 }
 
-.card {
-  @apply
-  p-6 
-  rounded-xl
-  text-[var(--black-color)]
-  bg-[var(--white-color)]
-}
-
 .input-field {
   @apply
   p-2
@@ -28,13 +20,6 @@
   focus:outline-none
   text-[var(--black-color)]
   outline-[var(--border-color)]
-}
-
-.card-title {
-  @apply
-  text-xl
-  text-center
-  font-bold;
 }
 
 .link {
