@@ -5,7 +5,7 @@
       <nav>
         <ul>
           <li class="tab" v-for="tab in tabs" :key="tab.label" :class="{ 'active-tab': tab.isActive }"
-            @click="activateTab(tab)"><a href="#{{ tab.label }}">{{ tab.label }}</a></li>
+            @click="activateTab(tab)">{{ tab.label }}</li>
         </ul>
       </nav>
     </div>
@@ -56,7 +56,7 @@ const activateTab = (selectedTab: Tab): void => {
 }
 
 .tab {
-  @apply p-3 my-2 rounded-lg cursor-pointer hover:bg-slate-300;
+  @apply p-3 my-2 rounded-lg cursor-pointer hover:bg-gray-200;
 }
 
 .active-tab {
