@@ -46,6 +46,6 @@ const handleClick = (event: MouseEvent) => {
 
 <style scoped>
 .btn-primary {
-  @apply p-3 text-[var(--white-color)] bg-[var(--primary-color)] rounded-md hover:shadow-2xl hover:bg-[var(--primary-hover-color)]
+  @apply p-3 text-[var(--white-color)] bg-[var(--dark-gray)] rounded-md hover:bg-[var(--ubuntu-orange)]
 }
 </style>

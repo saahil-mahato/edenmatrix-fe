@@ -52,6 +52,6 @@ const onInput = (event: Event) => {
 
 <style scoped>
 .input-field {
-  @apply w-full p-2 border-2 rounded-lg focus:outline-none text-[var(--black-color)] outline-[var(--border-color)]
+  @apply w-full p-2 rounded-lg text-[var(--white)] bg-[var(--dark-gray)] outline-none border-none
 }
 </style>
