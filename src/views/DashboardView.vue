@@ -48,7 +48,7 @@ const activateTab = (selectedTab: Tab): void => {
 }
 
 .side-bar {
-  @apply w-60 h-full py-6 px-3 text-black;
+  @apply w-60 h-full px-3 py-6 text-[var(--white)] bg-[var(--darker-gray)];
 }
 
 .side-bar h1 {
@@ -56,14 +56,14 @@ const activateTab = (selectedTab: Tab): void => {
 }
 
 .tab {
-  @apply p-3 my-2 rounded-lg cursor-pointer hover:bg-gray-200;
+  @apply p-3 my-2 rounded-lg cursor-pointer hover:bg-[var(--light-gray)];
 }
 
 .active-tab {
-  @apply bg-[var(--primary-color)] text-white !important;
+  @apply bg-[var(--ubuntu-orange)] text-white !important;
 }
 
 .content {
-  @apply flex-auto h-full bg-[var(--background-color)];
+  @apply flex-auto h-full p-6 text-[var(--white)] bg-[var(--dark-gray)];
 }
 </style>

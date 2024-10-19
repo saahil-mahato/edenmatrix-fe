@@ -35,7 +35,7 @@ const handleClick = (event: MouseEvent) => {
 
 <style scoped>
 .container {
-  @apply flex flex-col p-6 rounded-xl text-[var(--black-color)] bg-[var(--white-color)]
+  @apply flex flex-col p-6 rounded-xl text-[var(--white)] bg-[var(--darker-gray)]
 }
 
 .heading {
