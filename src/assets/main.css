@@ -17,7 +17,7 @@
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  @apply w-4
+  @apply w-4;
 }
 
 .link {

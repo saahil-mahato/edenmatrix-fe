@@ -16,12 +16,16 @@
         </ul>
       </nav>
     </div>
-    <div class="content">This is content</div>
+    <div class="content">
+      <RouterView></RouterView>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+
+import { useRouter } from 'vue-router'
 
 /**
  * Interface for tab.
@@ -45,6 +49,8 @@ const tabTitles: Array<string> = [
   'Infrastructure'
 ]
 
+const router = useRouter()
+
 /**
  * Covert tab titles to tab object.
  */
@@ -65,6 +71,8 @@ const activateTab = (selectedTab: Tab): void => {
   tabs.value.forEach((tab: Tab) => {
     tab.isActive = false
   })
+
+  router.push({ path: `/dashboard/${selectedTab.label.toLowerCase()}` })
 
   selectedTab.isActive = true
 }
