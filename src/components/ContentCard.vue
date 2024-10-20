@@ -1,6 +1,6 @@
 <template>
-  <div class="container" @click="handleClick">
-    <h1 class="heading">{{ heading }}</h1>
+  <div class="card-container" @click="handleClick">
+    <h1 class="card-heading">{{ heading }}</h1>
     <slot></slot>
   </div>
 </template>
@@ -13,32 +13,34 @@ const props = defineProps<{
   /**
    * The heading or title of the card.
    */
-  heading: string;
+  heading: string
 
   /**
    * The function to call when the card is clicked.
+   *
    * @param event - The click event.
    */
-  clickEvent?: (event: MouseEvent) => void;
-}>();
+  clickEvent?: (event: MouseEvent) => void
+}>()
 
 /**
  * Handles the click event by calling the provided clickEvent function.
+ *
  * @param event - The click event.
  */
 const handleClick = (event: MouseEvent) => {
   if (props.clickEvent) {
-    props.clickEvent(event);
+    props.clickEvent(event)
   }
-};
+}
 </script>
 
 <style scoped>
-.container {
-  @apply flex flex-col p-6 rounded-xl text-[var(--white)] bg-[var(--darker-gray)]
+.card-container {
+  @apply flex flex-col p-6 rounded-xl text-[var(--white)] bg-[var(--darker-gray)];
 }
 
-.heading {
+.card-heading {
   @apply text-xl text-center font-bold;
 }
 </style>

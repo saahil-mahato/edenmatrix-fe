@@ -4,42 +4,70 @@
       <h1>Dashboard</h1>
       <nav>
         <ul>
-          <li class="tab" v-for="tab in tabs" :key="tab.label" :class="{ 'active-tab': tab.isActive }"
-            @click="activateTab(tab)">{{ tab.label }}</li>
+          <li
+            class="tab"
+            v-for="tab in tabs"
+            :key="tab.label"
+            :class="{ 'active-tab': tab.isActive }"
+            @click="activateTab(tab)"
+          >
+            {{ tab.label }}
+          </li>
         </ul>
       </nav>
     </div>
-    <div class="content">
-      This is content
-    </div>
+    <div class="content">This is content</div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
+/**
+ * Interface for tab.
+ */
 interface Tab {
-  label: string;
-  isActive: boolean;
-  isAuthorized: boolean;
+  label: string
+  isActive: boolean
+  isAuthorized: boolean
 }
 
-const tabTitles: Array<string> = ['Overview', 'Projects', 'Engineering', 'Human Resource', 'Finance', 'Analytics', 'Infrastructure']
+/**
+ * Titles for tab.
+ */
+const tabTitles: Array<string> = [
+  'Overview',
+  'Projects',
+  'Engineering',
+  'Human Resource',
+  'Finance',
+  'Analytics',
+  'Infrastructure'
+]
 
-const tabs = ref<Tab[]>(tabTitles.map((tabTitle: string) => ({
-  label: tabTitle,
-  isActive: tabTitle === 'Overview',
-  isAuthorized: false
-})));
+/**
+ * Covert tab titles to tab object.
+ */
+const tabs = ref<Tab[]>(
+  tabTitles.map((tabTitle: string) => ({
+    label: tabTitle,
+    isActive: tabTitle === 'Overview',
+    isAuthorized: false
+  }))
+)
 
+/**
+ * Function to activate a tab.
+ *
+ * @param selectedTab - The tab that user selects.
+ */
 const activateTab = (selectedTab: Tab): void => {
   tabs.value.forEach((tab: Tab) => {
     tab.isActive = false
-  });
+  })
 
-  selectedTab.isActive = true;
+  selectedTab.isActive = true
 }
-
 </script>
 
 <style scoped>
@@ -56,11 +84,11 @@ const activateTab = (selectedTab: Tab): void => {
 }
 
 .tab {
-  @apply p-3 my-2 rounded-lg cursor-pointer hover:bg-[var(--light-gray)];
+  @apply p-3 my-2 rounded-lg cursor-pointer hover:bg-[var(--medium-gray)];
 }
 
 .active-tab {
-  @apply bg-[var(--ubuntu-orange)] text-white !important;
+  @apply bg-[var(--leaf-green)] text-white !important;
 }
 
 .content {

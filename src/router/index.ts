@@ -14,7 +14,7 @@ const router = createRouter({
       path: '/dashboard',
       name: 'Dashboard',
       component: DashboardView
-    },
+    }
   ]
 })
 
