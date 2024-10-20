@@ -1,9 +1,3 @@
-<template>
-  This is engineering section
-</template>
+<template>This is engineering section</template>
 
-<script setup lang="ts">
-</script>
-
-<style scoped>
-</style>
+<script setup lang="ts"></script>

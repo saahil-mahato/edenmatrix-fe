@@ -1,7 +1,6 @@
 <template>
   <div class="table-container">
     <table class="data-table">
-
       <thead>
         <tr>
           <th v-for="(column, index) in props.columns" :key="index">{{ column }}</th>
@@ -13,7 +12,6 @@
           <td v-for="(column, colIndex) in props.columns" :key="colIndex">{{ item[column] }}</td>
         </tr>
       </tbody>
-
     </table>
   </div>
 </template>
@@ -26,37 +24,38 @@ const props = defineProps<{
   /**
    * The columns of the table.
    */
-  columns: Array<string>,
+  columns: Array<string>
 
   /**
    * The data to be displayed in the table.
    */
-  data: Array<Record<string, any>>,
+  data: Array<Record<string, any>>
 }>()
 </script>
 
 <style scoped>
 .table-container {
-  @apply overflow-y-auto
+  @apply overflow-y-auto;
 }
 
 .data-table {
-  @apply w-full h-full text-white
+  @apply w-full h-full text-white;
 }
 
 th {
-  @apply sticky top-0 z-10 bg-[var(--darker-gray)]
+  @apply sticky top-0 z-10 bg-[var(--darker-gray)];
 }
 
-.data-table th, td {
-  @apply p-3 text-right
+.data-table th,
+td {
+  @apply p-3 text-right;
 }
 
 .data-table tbody tr:nth-child(even) {
-  @apply bg-[var(--light-gray)]
+  @apply bg-[var(--light-gray)];
 }
 
 .data-table tbody tr:nth-child(odd) {
-  @apply bg-[var(--medium-gray)]
+  @apply bg-[var(--medium-gray)];
 }
 </style>

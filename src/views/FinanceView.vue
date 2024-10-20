@@ -1,9 +1,3 @@
-<template>
-  This is finance section
-</template>
+<template>This is finance section</template>
 
-<script setup lang="ts">
-</script>
-
-<style scoped>
-</style>
+<script setup lang="ts"></script>

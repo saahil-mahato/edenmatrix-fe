@@ -56,7 +56,7 @@ const router = createRouter({
           path: 'infrastructure',
           name: 'infrastructure',
           component: InfrastructureView
-        },
+        }
       ]
     }
   ]

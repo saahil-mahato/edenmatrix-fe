@@ -1,9 +1,3 @@
-<template>
-  This is overview section
-</template>
+<template>This is overview section</template>
 
-<script setup lang="ts">
-</script>
-
-<style scoped>
-</style>
+<script setup lang="ts"></script>
