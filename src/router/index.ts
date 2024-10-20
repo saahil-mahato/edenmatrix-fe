@@ -1,13 +1,13 @@
 import LoginView from '@/views/LoginView.vue'
 import DashboardView from '@/views/DashboardView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import ProjectsView from '@/views/ProjectsView.vue'
-import OverviewView from '@/views/OverviewView.vue'
-import EngineeringView from '@/views/EngineeringView.vue'
-import HumanResourceView from '@/views/HumanResourceView.vue'
-import FinanceView from '@/views/FinanceView.vue'
-import AnalyticsView from '@/views/AnalyticsView.vue'
-import InfrastructureView from '@/views/InfrastructureView.vue'
+import ProjectsView from '@/views/dashboard/ProjectsView.vue'
+import OverviewView from '@/views/dashboard/OverviewView.vue'
+import EngineeringView from '@/views/dashboard/EngineeringView.vue'
+import HumanResourceView from '@/views/dashboard/HumanResourceView.vue'
+import FinanceView from '@/views/dashboard/FinanceView.vue'
+import AnalyticsView from '@/views/dashboard/AnalyticsView.vue'
+import InfrastructureView from '@/views/dashboard/InfrastructureView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,37 +24,37 @@ const router = createRouter({
       children: [
         {
           path: 'overview',
-          name: 'overview',
+          name: 'Overview',
           component: OverviewView
         },
         {
           path: 'projects',
-          name: 'projects',
+          name: 'Projects',
           component: ProjectsView
         },
         {
           path: 'engineering',
-          name: 'engineering',
+          name: 'Engineering',
           component: EngineeringView
         },
         {
-          path: 'human resource',
-          name: 'human resource',
+          path: 'humanresource',
+          name: 'Human Resource',
           component: HumanResourceView
         },
         {
           path: 'finance',
-          name: 'finance',
+          name: 'Finance',
           component: FinanceView
         },
         {
           path: 'analytics',
-          name: 'analytics',
+          name: 'Analytics',
           component: AnalyticsView
         },
         {
           path: 'infrastructure',
-          name: 'infrastructure',
+          name: 'Infrastructure',
           component: InfrastructureView
         }
       ]
