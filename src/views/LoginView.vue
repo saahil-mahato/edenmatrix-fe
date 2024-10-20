@@ -48,7 +48,7 @@ const handleLogin = async (): Promise<void> => {
     }
     response = await post(endpoints.LOGIN, payload)
     notifyStore.notify(NotificationType.Success, `Welcome ${response.data['user']}!`)
-    router.push({ name: 'Dashboard' })
+    router.push({ name: 'Overview' })
   } catch (error) {
     if (isAxiosError(error) && error.response) {
       notifyStore.notify(

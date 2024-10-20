@@ -52,12 +52,12 @@ const tabTitles: Array<string> = [
 const router = useRouter()
 
 /**
- * Covert tab titles to tab object.
+ * Convert tab titles to tab object.
  */
 const tabs = ref<Tab[]>(
   tabTitles.map((tabTitle: string) => ({
     label: tabTitle,
-    isActive: tabTitle === 'Overview',
+    isActive: tabTitle === tabTitles[0],
     isAuthorized: false
   }))
 )
@@ -72,7 +72,7 @@ const activateTab = (selectedTab: Tab): void => {
     tab.isActive = false
   })
 
-  router.push({ path: `/dashboard/${selectedTab.label.toLowerCase()}` })
+  router.push({ name: selectedTab.label})
 
   selectedTab.isActive = true
 }
